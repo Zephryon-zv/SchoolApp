@@ -84,6 +84,10 @@
     cursor: zoom-out
 }
 
+.mfp-close:hover{
+    cursor: pointer !important;
+}
+
 .mfp-zoom {
     cursor: pointer;
     cursor: -webkit-zoom-in;
@@ -441,6 +445,8 @@ screen and (max-height:300px) {
 
 @media all and (max-width:900px) {
     .mfp-arrow {
+        position: absolute;
+        top: 29rem;
         -webkit-transform: scale(.75);
         transform: scale(.75)
     }

@@ -28,13 +28,11 @@ def gallery(request):
     distinct_categories = GalleryItem.objects.values_list('category', flat=True).distinct()
 
     # Fetch all gallery images
-    gallery_images = list(GalleryItem.objects.all())
-
-
+    gallery_items = GalleryItem.objects.all()
+    
     data = {
         'distinct_categories': distinct_categories,
-        'gallery': gallery_images
+        'gallery': gallery_items,
     }
-    print(gallery_images)
     return render(request, 'gallery.html', data)
     
