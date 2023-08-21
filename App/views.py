@@ -1,6 +1,21 @@
 from django.shortcuts import render
 from django.conf import settings
 from App.models import Banner, About, GalleryItem
+import pyrebase
+
+config = {
+    "apiKey": "AIzaSyA2IdiynVVonDEzRHfCJ7f5VegBnB65J8c",
+    "authDomain": "schoolapp-f7483.firebaseapp.com",
+    "projectId": "schoolapp-f7483",
+    "databaseURL": "https://schoolapp-f7483-default-rtdb.firebaseio.com",
+    "storageBucket": "schoolapp-f7483.appspot.com",
+    "messagingSenderId": "79589135836",
+    "appId": "1:79589135836:web:96eec634aefd324f876b19"
+}
+
+firebase = pyrebase.initialize_app(config)
+authe = firebase.auth()
+database = firebase.database()
 
 # Create your views here.
 
