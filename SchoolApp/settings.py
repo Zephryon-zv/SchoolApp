@@ -136,8 +136,7 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# MEDIA_URL = '/media/'
-MEDIA_URL = 'https://<schoolapp-f7483>.web.app/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
