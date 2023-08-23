@@ -22,8 +22,6 @@ from django.views.static import serve
 
 urlpatterns = [
     # path('home/', home)
-    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
-    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     path('', views.home, name='home'),
     path('about/', views.about_view, name='about'),
     path('error-404/', views.error_404, name='error-404'),
