@@ -21,7 +21,8 @@ from django.urls import re_path as url
 from django.views.static import serve
 
 urlpatterns = [
-    
+    # url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    # url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     # path('home/', home)
     path('', views.home, name='home'),
     path('about/', views.about_view, name='about'),
